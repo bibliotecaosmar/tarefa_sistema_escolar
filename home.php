@@ -21,6 +21,6 @@ $sti = $page->sti;
 
 <?php Include 'head.php' ?>
 
-
+<h1>HOME</h1>
 
 <?php Include 'footer.php' ?>
