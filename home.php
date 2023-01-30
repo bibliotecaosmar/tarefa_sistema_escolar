@@ -21,6 +21,14 @@ $sti = $page->sti;
 
 <?php Include 'head.php' ?>
 
-<h1>HOME</h1>
+<div class="container text-center">
+  <div class="row mb-4">
+    <div class="col"></div>
+    <div class="col align-items-center">
+      <h2>HOME</h2>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
 
 <?php Include 'footer.php' ?>

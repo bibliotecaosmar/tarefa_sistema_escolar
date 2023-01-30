@@ -19,16 +19,16 @@
           <div class="col-2">
             <img src="imgs/logotipo.png" alt="" width="50" height="50" class="d-inline-block align-text-center">
           </div>
-          <div class="col-4 pt-2">
-            <span class="navbar-brand bg-primary-text" href="#">
+          <div class="col-4 pt-1">
+            <span class="navbar-brand fs-4" href="#">
               Computex
             </span>
           </div>
           <div class="col-2 pt-2">
-            <a class="nav-link bg-primary-text" href="home.php">Home</a>
+            <a class="nav-link fs-5" href="home.php">Home</a>
           </div>
           <div class="col-2 pt-2">
-            <a class="nav-link bg-primary-text" href="turma.php">Turma</a>
+            <a class="nav-link fs-5" href="turma.php">Turma</a>
           </div>
         </div>
       </nav>

@@ -66,8 +66,6 @@ $sti = $page->sti;
   </div>
 </div>
 
-
-
 <?php Include 'footer.php' ?>
 
 
