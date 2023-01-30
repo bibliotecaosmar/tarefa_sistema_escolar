@@ -10,7 +10,7 @@
 
     <nav class="navbar bg-primary">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row align-text-center">
           <div class="col-2">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
               <span class="navbar-toggler-icon"></span>
@@ -19,15 +19,15 @@
           <div class="col-2">
             <img src="imgs/logotipo.png" alt="" width="50" height="50" class="d-inline-block align-text-center">
           </div>
-          <div class="col-4">
-            <a class="navbar-brand bg-primary-text" href="#">
+          <div class="col-4 pt-2">
+            <span class="navbar-brand bg-primary-text" href="#">
               Computex
-            </a>
+            </span>
           </div>
-          <div class="col-2">
+          <div class="col-2 pt-2">
             <a class="nav-link bg-primary-text" href="home.php">Home</a>
           </div>
-          <div class="col-2">
+          <div class="col-2 pt-2">
             <a class="nav-link bg-primary-text" href="turma.php">Turma</a>
           </div>
         </div>
