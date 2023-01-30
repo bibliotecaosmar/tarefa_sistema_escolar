@@ -28,7 +28,7 @@ function fhora($hora){
 <?php Include 'head.php' ?>
 
 <div class="container text-center">
-  <div class="row">
+  <div class="row mb-4">
     <div class="col"></div>
     <div class="col align-items-center">
       <h2>HORÁRIO</h2>
@@ -44,7 +44,7 @@ function fhora($hora){
         echo '<tr>';
         for ($i=0; $i<5; $i++) {
           $semana = $programacao->horario[$i];
-          echo '  <td class="table-secondary">' . $semana->dia . '</td>';
+          echo '  <td class="table-dark">' . $semana->dia . '</td>';
         };
         echo '</tr>';
 

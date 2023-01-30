@@ -23,7 +23,7 @@ $sti = $page->sti;
 
 <?php Include 'head.php' ?>
 <div class="container text-center">
-  <div class="row">
+  <div class="row mb-4">
     <div class="col"></div> 
     <div class="col align-items-center"> 
       <h2>ACESSO</h2>
@@ -34,7 +34,7 @@ $sti = $page->sti;
     <div class="col">
       <table class="table table-striped-columns">
         <thead>
-          <tr>
+          <tr class="table-dark">
             <th scope="col">#</th>
             <th scope="col">Código da Escola</th>
             <th scope="col">Ano</th>

@@ -19,14 +19,12 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
-echo gettype($turma[1]->matricula);
-
 ?>
 
 <?php Include 'head.php' ?>
 
 <div class="container text-center">
-  <div class="row">
+  <div class="row mb-4">
     <div class="col"></div>
     <div class="col align-items-center">
       <h2>TURMA</h2>
@@ -38,7 +36,7 @@ echo gettype($turma[1]->matricula);
     <div class="col">
       <table class="table table-striped-columns">
         <thead>
-          <tr>
+          <tr class="table-dark">
             <th scope="col">#</th>
             <th scope="col">Matrícula</th>
             <th scope="col">Nome</th>
