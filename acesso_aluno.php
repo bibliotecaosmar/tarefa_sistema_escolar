@@ -47,7 +47,7 @@ $sti = $page->sti;
         </thead>
         <tbody>
         <?php
-          for ($i=0; $i<5; $i++) {
+          for ($i=0; $i<34; $i++) {
   
             $acesso = $acesso_aluno[$i];
             echo '<tr>';

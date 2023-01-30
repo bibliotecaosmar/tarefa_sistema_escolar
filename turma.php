@@ -19,6 +19,8 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
+echo gettype($turma[1]->matricula);
+
 ?>
 
 <?php Include 'head.php' ?>
@@ -28,6 +30,7 @@ $sti = $page->sti;
     <div class="col"></div>
     <div class="col align-items-center">
       <h2>TURMA</h2>
+      <a href="pdfs/turma.pdf" class="btn btn-primary">.PDF</a>
     </div>
     <div class="col"></div>
   </div>
@@ -37,29 +40,22 @@ $sti = $page->sti;
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Código da Escola</th>
-            <th scope="col">Ano</th>
-            <th scope="col">Grau da Série</th>
-            <th scope="col">Turno</th>
-            <th scope="col">Turma</th>
-            <th scope="col">Grau Longo</th>
-            <th scope="col">Série Longa</th>
+            <th scope="col">Matrícula</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sequência</th>
+            <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>
         <?php
-          for ($i=0; $i<5; $i++) {
+          for ($i=0; $i<25; $i++) {
   
-            $acesso = $acesso_aluno[$i];
             echo '<tr>';
             echo '  <th scope="row">' . $i+1 . '</th>';
-            echo '  <td>' . $acesso->codigo_escola . '</td>';
-            echo '  <td>' . $acesso->ano . '</td>';
-            echo '  <td>' . $acesso->grau_serie . '</td>';
-            echo '  <td>' . $acesso->turno . '</td>';
-            echo '  <td>' . $acesso->turma . '</td>';
-            echo '  <td>' . $acesso->grau_longo . '</td>';
-            echo '  <td>' . $acesso->serie_longa . '</td>';
+            echo '  <td>' . $turma[$i]->matricula. '</td>';
+            echo '  <td>' . $turma[$i]->nome. '</td>';
+            echo '  <td>' . $turma[$i]->sequencia. '</td>';
+            echo '  <td>' . $turma[$i]->status. '</td>';
             echo '</tr>';
         
           };
