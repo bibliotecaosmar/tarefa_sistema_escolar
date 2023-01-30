@@ -26,7 +26,7 @@ $sti = $page->sti;
   <div class="row mb-2 mt-2">
     <div class="col"></div> 
     <div class="col align-items-center"> 
-      <h2>ACESSO - ALUNOS</h2>
+      <h2>ACESSO - ALUNO</h2>
     </div>
     <div class="col"></div>
   </div>

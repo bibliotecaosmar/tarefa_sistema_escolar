@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <nav class="navbar bg-primary">
+    <nav class="navbar bg-primary bg-primary-text">
       <div class="container-fluid">
         <div class="row align-text-center">
           <div class="col-2">
