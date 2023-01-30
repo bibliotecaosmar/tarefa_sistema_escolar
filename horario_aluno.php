@@ -28,6 +28,13 @@ function fhora($hora){
 <?php Include 'head.php' ?>
 
 <div class="container text-center">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col align-items-center">
+      <h2>HORÁRIO</h2>
+    </div>
+    <div class="col"></div>
+  </div>
   <div class="row align-items-center">
     <div class="col">
       <table class="table table-striped-columns">

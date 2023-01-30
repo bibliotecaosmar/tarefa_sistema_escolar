@@ -7,32 +7,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body>
-   
-    <nav class="navbar navbar-primary bg-primary">
+
+    <nav class="navbar bg-primary">
       <div class="container-fluid">
-       
         <div class="row">
-          <div class="col-3">
+          <div class="col-2">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <h1>COMPUTEX</h1>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="home.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="turma.php">Turma</a>
-              </li>
-            </ul>
+          <div class="col-2">
+            <img src="imgs/logotipo.png" alt="" width="50" height="50" class="d-inline-block align-text-center">
           </div>
-      </div>
-    </nav>
-    
+          <div class="col-4">
+            <a class="navbar-brand bg-primary-text" href="#">
+              Computex
+            </a>
+          </div>
+          <div class="col-2">
+            <a class="nav-link bg-primary-text" href="home.php">Home</a>
+          </div>
+          <div class="col-2">
+            <a class="nav-link bg-primary-text" href="turma.php">Turma</a>
+          </div>
+        </div>
+      </nav>
+   
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">

@@ -19,15 +19,20 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
-echo gettype($acesso_aluno[0]);
-
 ?>
 
 <?php Include 'head.php' ?>
 <div class="container text-center">
+  <div class="row">
+    <div class="col"></div> 
+    <div class="col align-items-center"> 
+      <h2>ACESSO</h2>
+    </div>
+    <div class="col"></div>
+  </div>
   <div class="row align-items-center">
     <div class="col">
-      <table class="table table-secondary table-striped-columns">
+      <table class="table table-striped-columns">
         <thead>
           <tr>
             <th scope="col">#</th>

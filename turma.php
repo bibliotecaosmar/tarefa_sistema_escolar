@@ -2,10 +2,10 @@
 
 // Decode do json (GET)
 $data_page = file_get_contents('http://camerascomputex.ddns.net:8080/escola/mobile_login.php?matricula=2011004&senha=99999999&token=X&so=ios');
-$data_acesso_aluno = file_get_contents('http://camerascomputex.ddns.net:8080/escola/ws_controller.php?action=getTurmas&ano=20211');
+$data_turma = file_get_contents('http://camerascomputex.ddns.net:8080/escola/ws_controller.php?action=getAlunosTurma&ano=20211&escola=1&grau_serie=15&turno=M&turma=1&status=C');
 
 $page = json_decode($data_page);
-$acesso_aluno = json_decode($data_acesso_aluno);
+$turma = json_decode($data_turma);
 
 // Componentes da página
 $config = $page->config;
@@ -19,17 +19,21 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
-echo gettype($acesso_aluno[0]);
-
 ?>
 
 <?php Include 'head.php' ?>
 
-<h1>TURMA</h1>
 <div class="container text-center">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col align-items-center">
+      <h2>TURMA</h2>
+    </div>
+    <div class="col"></div>
+  </div>
   <div class="row align-items-center">
     <div class="col">
-      <table class="table table-secondary table-striped-columns">
+      <table class="table table-striped-columns">
         <thead>
           <tr>
             <th scope="col">#</th>
