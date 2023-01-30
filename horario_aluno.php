@@ -49,23 +49,23 @@ $sti = $page->sti;
         $semana = $programacao->horario[$i];
         echo '<tr>';
         echo '  <th scope="row">#</th>';
-        echo '  <td colspan="10">' . $semana->dia . '</td>';
+        echo '  <td colspan="10" class="table-secondary">' . $semana->dia . '</td>';
         echo '</tr>';
-        for ($j=0; $j<10; $j++) {
+        for ($j=0; $j<4; $j++) {
           
           $horarios = $semana->horarios[$j];
           echo '<tr>';
           echo '  <th scope="row">' . $j+1 . '</th>';
           echo '  <td>' . $horarios->escola . '</td>';
           echo '  <td>' . $horarios->codigo_serie . '</td>';
-          echo '  <td>Série</td>';
-          echo '  <td>Turno</td>';
-          echo '  <td>Turma</td>';
-          echo '  <td>Código da Disciplina</td>';
-          echo '  <td>Disciplina</td>';
-          echo '  <td>Início</td>';
-          echo '  <td>Fim</td>';
-          echo '  <td>Professor</td>';
+          echo '  <td>' . $horarios->serie . '</td>';
+          echo '  <td>' . $horarios->turno . '</td>';
+          echo '  <td>' . $horarios->turma . '</td>';
+          echo '  <td>' . $horarios->codigo_disciplina . '</td>';
+          echo '  <td>' . $horarios->disciplina . '</td>';
+          echo '  <td>' . $horarios->inicio . '</td>';
+          echo '  <td>' . $horarios->fim . '</td>';
+          echo '  <td>' . $horarios->professor . '</td>';
           echo '</tr>';
         
         };
@@ -75,25 +75,6 @@ $sti = $page->sti;
 
   </tbody>
 
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
 </table>
 
 <?php Include 'footer.php' ?>
