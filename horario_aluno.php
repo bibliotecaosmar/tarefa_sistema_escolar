@@ -5,7 +5,7 @@ $data_page = file_get_contents('http://camerascomputex.ddns.net:8080/escola/mobi
 $data_horario = file_get_contents('http://camerascomputex.ddns.net:8080/escola/json_horario_aluno.php?matricula=2011004&senha=99999999&ano=20211');
 
 $page = json_decode($data_page);
-$horario = json_decode($data_horario);
+$programacao = json_decode($data_horario);
 
 // Componentes da página
 $config = $page->config;
@@ -18,6 +18,8 @@ $boleto_processado = $page->boleto_processado;
 $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
+
+//echo gettype($programacao->horario[0]->dia);
 
 ?>
 
@@ -40,24 +42,37 @@ $sti = $page->sti;
     </tr>
   </thead>
   <tbody>
-   <?php
+  <?php
 
-    for ($i=0; $i<10; $i++;) {
-      echo '<th scope="col">#</th>'
-      echo '<td scope="col">Escola</th>'
-      echo '<td scope="col">Código da Série</th>'
-      echo '<td scope="col">Série</th>'
-      echo '<td scope="col">Turno</th>'
-      echo '<td scope="col">Turma</th>'
-      echo '<td scope="col">Código da Disciplina</th>'
-      echo '<td scope="col">Disciplina</th>'
-      echo '<td scope="col">Início</th>'
-      echo '<td scope="col">Fim</th>'
-      echo '<td scope="col">Professor</th>'
+      for ($i=0; $i<5; $i++) {
+       
+        $semana = $programacao->horario[$i];
+        echo '<tr>';
+        echo '  <th scope="row">#</th>';
+        echo '  <td colspan="10">' . $semana->dia . '</td>';
+        echo '</tr>';
+        for ($j=0; $j<10; $j++) {
+          
+          $horarios = $semana->horarios[$j];
+          echo '<tr>';
+          echo '  <th scope="row">' . $j+1 . '</th>';
+          echo '  <td>' . $horarios->escola . '</td>';
+          echo '  <td>' . $horarios->codigo_serie . '</td>';
+          echo '  <td>Série</td>';
+          echo '  <td>Turno</td>';
+          echo '  <td>Turma</td>';
+          echo '  <td>Código da Disciplina</td>';
+          echo '  <td>Disciplina</td>';
+          echo '  <td>Início</td>';
+          echo '  <td>Fim</td>';
+          echo '  <td>Professor</td>';
+          echo '</tr>';
         
-    };
-
+        };
+      
+      };
   ?>
+
   </tbody>
 
   <tbody>

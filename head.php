@@ -19,7 +19,7 @@
           </div>
           <div class="col-2">
             <a class="navbar-brand" href="#">
-              <img src="./logotipo.png" alt="" width="50" height="50">
+              <img src="imgs/logotipo.png" alt="" width="50" height="50">
             </a>
           </div>
           <div class="col-7">
@@ -33,7 +33,7 @@
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
-          <img src="logotipo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+          <img src="imgs/logotipo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
           <h3 class="bg-primary-text">Computex<h3>
         </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -42,7 +42,7 @@
         <div class="list-group list-group-flush">
             <?php
               for ($i=0; $i<17; $i++) {
-                echo '<a type="button" class="list-group-item list-group-item-action" href=' . $menu[$i]->link . '>' . $menu[$i]->titulo . ' - ' . $menu[$i]->opc . '</a>';
+                echo '<a type="button" class="list-group-item list-group-item-action" href=' . $menu[$i]->link . '>' . '<img src=imgs/' . $menu[$i]->icone . ' width=20 height=20 class="d-inline-block align-text-top"> ' . $menu[$i]->titulo . ' - ' . $menu[$i]->opc . '</a>';
               }; 
             ?>
         </div>
