@@ -23,10 +23,10 @@ $sti = $page->sti;
 
 <?php Include 'head.php' ?>
 <div class="container text-center">
-  <div class="row mb-4">
+  <div class="row mb-2 mt-2">
     <div class="col"></div> 
     <div class="col align-items-center"> 
-      <h2>ACESSO</h2>
+      <h2>ACESSO - ALUNOS</h2>
     </div>
     <div class="col"></div>
   </div>
@@ -70,8 +70,6 @@ $sti = $page->sti;
     </div>
   </div>
 </div>
-
-
 
 <?php Include 'footer.php' ?>
 

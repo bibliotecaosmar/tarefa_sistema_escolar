@@ -28,7 +28,7 @@ function fhora($hora){
 <?php Include 'head.php' ?>
 
 <div class="container text-center">
-  <div class="row mb-4">
+  <div class="row mb-2 mt-2">
     <div class="col"></div>
     <div class="col align-items-center">
       <h2>HORÁRIO</h2>
