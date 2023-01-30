@@ -19,63 +19,54 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
-//echo gettype($programacao->horario[0]->dia);
+function fhora($hora){
+  return substr($hora, 0, 2) . ":" . substr($hora, 2, 2) . 'h';
+}; 
 
 ?>
 
 <?php Include 'head.php' ?>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Escola</th>
-      <th scope="col">Código da Série</th>
-      <th scope="col">Série</th>
-      <th scope="col">Turno</th>
-      <th scope="col">Turma</th>
-      <th scope="col">Código da Disciplina</th>
-      <th scope="col">Disciplina</th>
-      <th scope="col">Início</th>
-      <th scope="col">Fim</th>
-      <th scope="col">Professor</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php
-
-      for ($i=0; $i<5; $i++) {
-       
-        $semana = $programacao->horario[$i];
+<div class="container text-center">
+  <div class="row align-items-center">
+    <div class="col">
+      <table class="table table-striped-columns">
+      <tbody>
+      <?php
+        // Dias da Semana
         echo '<tr>';
-        echo '  <th scope="row">#</th>';
-        echo '  <td colspan="10" class="table-secondary">' . $semana->dia . '</td>';
-        echo '</tr>';
-        for ($j=0; $j<4; $j++) {
-          
-          $horarios = $semana->horarios[$j];
-          echo '<tr>';
-          echo '  <th scope="row">' . $j+1 . '</th>';
-          echo '  <td>' . $horarios->escola . '</td>';
-          echo '  <td>' . $horarios->codigo_serie . '</td>';
-          echo '  <td>' . $horarios->serie . '</td>';
-          echo '  <td>' . $horarios->turno . '</td>';
-          echo '  <td>' . $horarios->turma . '</td>';
-          echo '  <td>' . $horarios->codigo_disciplina . '</td>';
-          echo '  <td>' . $horarios->disciplina . '</td>';
-          echo '  <td>' . $horarios->inicio . '</td>';
-          echo '  <td>' . $horarios->fim . '</td>';
-          echo '  <td>' . $horarios->professor . '</td>';
-          echo '</tr>';
-        
+        for ($i=0; $i<5; $i++) {
+          $semana = $programacao->horario[$i];
+          echo '  <td class="table-secondary">' . $semana->dia . '</td>';
         };
-      
-      };
-  ?>
+        echo '</tr>';
 
-  </tbody>
+        // Programação
+        for ($i=0; $i<4; $i++) {
+          echo '<tr>';
+          for ($j=0; $j<5; $j++) {
+            $semana = $programacao->horario[$j];
+            $dia = $semana->horarios[$i];
+  
+            echo '  <td>';
+            echo $dia->serie . '<br>'; 
+            echo $dia->turno . ' / ' . $dia->turma . '<br>';
+            echo $dia->disciplina . '<br>';
+            echo 'Prof(a).' . $dia->professor . '<br>';
+            echo 'De ' . fhora($dia->inicio) . ' às ' . fhora($dia->fim) . '<br>';  
+            echo '</td>';
+            };
+          echo '</tr>';   
+          };
+        ?>
 
-</table>
+        </tbody>
+
+      </table>   
+
+    </div>
+  </div>
+</div>
 
 <?php Include 'footer.php' ?>
 

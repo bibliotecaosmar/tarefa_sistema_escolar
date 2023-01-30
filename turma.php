@@ -24,6 +24,8 @@ echo gettype($acesso_aluno[0]);
 ?>
 
 <?php Include 'head.php' ?>
+
+<h1>TURMA</h1>
 <div class="container text-center">
   <div class="row align-items-center">
     <div class="col">
@@ -69,4 +71,5 @@ echo gettype($acesso_aluno[0]);
 
 
 <?php Include 'footer.php' ?>
+
 
