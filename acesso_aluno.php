@@ -22,6 +22,7 @@ $sti = $page->sti;
 ?>
 
 <?php Include 'head.php' ?>
+
 <div class="container text-center">
   <div class="row mb-2 mt-2">
     <div class="col"></div> 
@@ -53,7 +54,7 @@ $sti = $page->sti;
             echo '<tr>';
             echo '  <th scope="row">' . $i+1 . '</th>';
             echo '  <td>' . $acesso->codigo_escola . '</td>';
-            echo '  <td>' . $acesso->ano . '</td>';
+            echo '  <td id="dataPeriodo'. $i .'">' . $acesso->ano . '</td>';
             echo '  <td>' . $acesso->grau_serie . '</td>';
             echo '  <td>' . $acesso->turno . '</td>';
             echo '  <td>' . $acesso->turma . '</td>';
