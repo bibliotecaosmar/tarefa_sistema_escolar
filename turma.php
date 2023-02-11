@@ -28,7 +28,7 @@ $sti = $page->sti;
     <div class="col"></div>
     <div class="col align-items-center">
       <h2>TURMA</h2>
-      <a href="pdfs/turma.pdf" class="btn btn-primary">.PDF</a>
+      <a href="relatorio_turma.php" class="btn btn-primary">.PDF</a>
     </div>
     <div class="col"></div>
   </div>
@@ -58,9 +58,7 @@ $sti = $page->sti;
         
           };
         ?>
-
         </tbody>
-
       </table>
     </div>
   </div>
