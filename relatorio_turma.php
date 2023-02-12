@@ -46,6 +46,9 @@ class PDF extends FPDF
 
   function HTable()
   {
+    // Cores do Header
+    $this->SetFillColor(230, 230, 230);
+
     // Header - Tabela
     $this->Cell(20, 9, "Matricula", 1, 0, 'C', 1);
     $this->Cell(70, 9, "Nome", 1, 0, 'C', 1);
