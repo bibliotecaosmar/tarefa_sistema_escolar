@@ -20,49 +20,65 @@ $arquivo = 'relatorio_turma.pdf';
 $tipo_pdf = 'I';
 $logotipo = 'imgs/logotipo.png';
 
+$header = array('Matricula', 'Nome', 'Sequencia', 'Status');
+
 // Extensão da Classe
 class PDF extends FPDF 
 {
   // Cabeça da página
   function Header()
   {
-    $this->Image($logotipo, 80, 6, 80);
-    $this->SetFont('Arial', 'B', 15);
-    $this->Cell(80);
-    $this->Cell(30, 10, 'Titulo', 1, 0, 'C');
-    $this->Ln(20);
+    $this->Image('imgs/logotipo.jpg', 30, 12, 15);
+    $this->Image('imgs/computex.jpg', 50, 14, 40);
+    $this->SetFont('Arial', 'B', 11);
+    $this->Cell(60);
+    $this->Cell(30, 50, 'Turma - Alunos', 0, 0, 'C');
+    $this->Ln(35);
   }
   
+  // Footer da página
   function Footer()
   {
     $this->SetY(-15);
     $this->SetFont('Arial', 'I', 8);
     $this->Cell(0, 10, 'Pagina ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
   }
+
+  function HTable()
+  {
+    // Header - Tabela
+    $this->Cell(20, 9, "Matricula", 1, 0, 'C', 1);
+    $this->Cell(70, 9, "Nome", 1, 0, 'C', 1);
+    $this->Cell(30, 9, "Sequencia", 1, 0, 'C', 1);
+    $this->Cell(30, 9, "Status", 1, 1, 'C', 1);
+  }
+
+  function Table($data)
+  {
+    // Cores da Tabela
+    $this->SetFillColor(255, 255, 255);
+
+    // Corpo da Tabela
+    foreach ($data as $row) {
+  
+      $this->Cell(20, 9, $row->matricula, 1, 0, 'C');
+      $this->Cell(70, 9, $row->nome, 1, 0, 'C');
+      $this->Cell(30, 9, $row->sequencia, 1, 0, 'C');
+      $this->Cell(30, 9, $row->status, 1, 1, 'C');
+
+    };
+  }
 }
 
 // Instancia classe
-$pdf = new FPDF("P", "mm", "A4");
+$pdf = new PDF("P", "mm", "A4");
+$pdf->SetLeftMargin(35);
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 8);
-
-// Header - Tabela
-$pdf->Cell(20, 9, "Matricula", 1, 0, 'C');
-$pdf->Cell(70, 9, "Nome", 1, 0, 'C');
-$pdf->Cell(30, 9, "Sequencia", 1, 0, 'C');
-$pdf->Cell(30, 9, "Status", 1, 1, 'C');
-
-// Corpo - Tabela
-$pdf->SetFont('Arial', '', 9);
-
-foreach ($turma as $aluno) {
-  
-  $pdf->Cell(20, 9, $aluno->matricula, 1, 0, 'C');
-  $pdf->Cell(70, 9, $aluno->nome, 1, 0, 'C');
-  $pdf->Cell(30, 9, $aluno->sequencia, 1, 0, 'C');
-  $pdf->Cell(30, 9, $aluno->status, 1, 1, 'C');
-
-};
+$pdf->HTable();
+$pdf->SetFont('Arial', '', 8);
+$pdf->Table($turma);
+$pdf->Footer();
 
 $pdf->Output($arquivo, $tipo_pdf);
