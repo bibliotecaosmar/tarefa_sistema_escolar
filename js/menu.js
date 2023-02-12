@@ -1,3 +1,4 @@
+/*
 const currentPage = () => {
   if (document.title = "Home") {
     document.getElementById("Home").classList.add('active')
@@ -17,3 +18,4 @@ const currentPage = () => {
 
 // Default functions
 currentPage()
+*/
