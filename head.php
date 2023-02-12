@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <nav class="navbar bg-primary bg-primary-text shadow mb-2 bg-body-primary" data-bs-theme="dark">
+    <nav class="navbar bg-primary bg-primary-text shadow mb-2 bg-body-primary">
       <div class="container-fluid text-center">
         <div class="row w-50">
           <button class="navbar-toggler col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
