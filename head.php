@@ -10,11 +10,11 @@
 
     <nav class="navbar bg-primary bg-primary-text shadow mb-2 bg-body-primary">
       <div class="container-fluid text-center">
-        <div class="row w-50">
+        <div class="row w-75">
           <button class="navbar-toggler col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="col-2">
+          <div class="col-1">
             <img src="imgs/logotipo.png" alt="" width="60" height="60" class="d-inline-block align-text-center">
           </div>
           <span class="navbar-brand fs-3 col-2 pt-2" href="#">
@@ -22,7 +22,7 @@
           </span>
           <a id="Home" class="col-1 pt-3 nav-link fs-5 bg-primary-text" href="home.php">Home</a>
           <a id="Turma" class="col-1 pt-3 nav-link fs-5 bg-primary-text" href="turma.php">Turma</a>
-          <div class="offcanvas offcanvas-start col-5" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas offcanvas-start col-6" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
                 <img src="imgs/logotipo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
