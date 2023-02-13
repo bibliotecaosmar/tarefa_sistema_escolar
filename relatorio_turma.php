@@ -20,8 +20,6 @@ $arquivo = 'relatorio_turma.pdf';
 $tipo_pdf = 'I';
 $logotipo = 'imgs/logotipo.png';
 
-$header = array('Matricula', 'Nome', 'Sequencia', 'Status');
-
 // Extensão da Classe
 class PDF extends FPDF 
 {
@@ -50,9 +48,9 @@ class PDF extends FPDF
     $this->SetFillColor(230, 230, 230);
 
     // Header - Tabela
-    $this->Cell(20, 9, "Matricula", 1, 0, 'C', 1);
+    $this->Cell(20, 9, utf8_decode("Matrícula"), 1, 0, 'C', 1);
     $this->Cell(70, 9, "Nome", 1, 0, 'C', 1);
-    $this->Cell(30, 9, "Sequencia", 1, 0, 'C', 1);
+    $this->Cell(30, 9, utf8_decode("Sequência"), 1, 0, 'C', 1);
     $this->Cell(30, 9, "Status", 1, 1, 'C', 1);
   }
 
@@ -65,7 +63,7 @@ class PDF extends FPDF
     foreach ($data as $row) {
   
       $this->Cell(20, 9, $row->matricula, 1, 0, 'C');
-      $this->Cell(70, 9, $row->nome, 1, 0, 'C');
+      $this->Cell(70, 9, utf8_decode($row->nome), 1, 0, 'C');
       $this->Cell(30, 9, $row->sequencia, 1, 0, 'C');
       $this->Cell(30, 9, $row->status, 1, 1, 'C');
 
