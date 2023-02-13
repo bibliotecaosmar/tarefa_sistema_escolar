@@ -19,6 +19,8 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
+$subtitle = "Turma";
+
 ?>
 
 <?php Include 'head.php' ?>

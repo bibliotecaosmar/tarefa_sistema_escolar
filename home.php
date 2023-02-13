@@ -17,6 +17,8 @@ $permissao_matricula = $page->permissao_matricula;
 $data_aceite = $page->data_aceite;
 $sti = $page->sti;
 
+$subtitle = "Home";
+
 ?>
 
 <?php Include 'head.php' ?>
